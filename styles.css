@@ -1,3 +1,8 @@
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 html {
   scroll-behavior: smooth;
@@ -67,7 +72,7 @@ li .nav-link:focus {
 .p1{
     font-size: 1.6em;
     font-weight: 700;
-    color: #001f40; /* your navy */
+    color: #001f40;
     line-height: 1.45;
     letter-spacing: 0.3px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
@@ -136,7 +141,6 @@ li .nav-link:focus {
     background-color: rgba(0, 31, 64, 0.85);
     border-radius: 0.5rem;
     padding: 2rem;
-    max-width: 600px;
     width: 100%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 
@@ -210,8 +214,7 @@ li .nav-link:focus {
 /* carousel */
 
 .carousel{
-  margin: 100px auto;
-  width: 95%;
+  width: 100%;
   display: flex;
   overflow-x: auto;
    touch-action: pan-y;
@@ -231,11 +234,8 @@ li .nav-link:focus {
 }
 
 .card {
-    display: flex;
-    flex-direction: column;      
-    justify-content: space-between; 
-    align-items: center;          
-    flex: 0 0 14rem;             
+    display: flex;         
+    flex: 0 0 11em;             
     min-height: 24rem;            
     padding: 1em;
     background: #ffffff;
@@ -252,8 +252,8 @@ li .nav-link:focus {
 
 .card h5 {
     margin: 0.5em 0;
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1em;
+    font-weight: 600;
     color: #001f40;
 }
 
@@ -281,7 +281,8 @@ li .nav-link:focus {
     color: #ffffff;                    
     font-weight: 700;                   
     font-size: 2rem;                 
-    margin-bottom: 1.5em;               
+    margin-bottom: 2.2em;   
+    margin-top: 2.2em;            
     letter-spacing: 1px;               
     text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
     line-height: 1.2;                   
@@ -402,7 +403,7 @@ li .nav-link:focus {
 /* booking section */
 
 .book{
-background:linear-gradient(to bottom,#3f90d2,#ffffff, #ffffff);
+background:linear-gradient(to bottom,#3f90d2,#3f90d2, #ffffff, #ffffff);
 padding-top: 0.5em;
 }
 
@@ -426,18 +427,16 @@ padding-top: 0.5em;
     margin: 0.1em auto 0;              
     border-radius: 2px;
     background: linear-gradient(to right, 
-                rgb(144, 179, 202),   /* fade left */
+                rgb(51, 120, 165),   /* fade left */
                 #051195,               /* solid center */
-                rgb(144, 179, 202));  /* fade right */
+                rgb(51, 120, 165));  /* fade right */
 }
 
 .bookP{
-  color: #001f40;
+  color: #000b17;
   font-size: 1.1em;
   font-weight: 400;
   line-height: 1.8;
-  letter-spacing: 0.2px;
-  max-width: 850px;
   margin: 0 auto 3rem auto;   /* centers and spaces it */
 }
   
@@ -449,15 +448,13 @@ padding-top: 0.5em;
 .medH{
   font-size:1.15em;
   font-weight: 600;
-  margin-top: 3em;
-  margin-bottom: 2em;
+  margin-top: 2.5em;
 }
 
 /* carousel2 */
 
 .carousel2{
-  margin-top: -2em;
-  width: 95%;
+  width: 100%;
   display: flex;
   overflow-x: auto;
   touch-action: pan-y;
@@ -500,7 +497,6 @@ padding-top: 0.5em;
 
 .footer-tagline{
   opacity:.9;
-  max-width:650px;
   margin:0 auto;
 }
 
