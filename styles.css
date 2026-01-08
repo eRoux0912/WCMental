@@ -104,7 +104,7 @@ li .nav-link:focus {
     font-size: 1.2em;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 24%;
+    width: 14em;
     box-shadow: 0 3px 8px rgba(0, 30, 64, 0.3);
 }
 
@@ -220,9 +220,9 @@ li .nav-link:focus {
 
 .carousel{
   display: flex;
-  overflow-x: auto;
-  overflow-y: auto;
-   touch-action: pan-y;
+  overflow: hidden;
+  touch-action: pan-y;
+  width: 100%;
 }
 
 .carousel::-webkit-scrollbar {
@@ -232,27 +232,40 @@ li .nav-link:focus {
 .group{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1em;
+  gap: 1rem;
   animation: spin 25s linear infinite;
   padding-right: 1em;
+  will-change: transform;
 }
 
 .card {
-    height:100%;
+    height:22rem;
     display: flex;         
-    flex: 0 0 11em;                         
+    flex: 0 0 14rem;                         
     padding: 1em;
     background: #ffffff;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     border-radius: 20px; 
     border: 1px solid rgba(0, 0, 0, 0.05); 
 }
 
-@keyframes spin {
-  from { translate: 0; }
-  to { translate: -100%; }
+.card img{
+   max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
+
+@keyframes spin {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 
 .card h5 {
     color: #001f40;
@@ -454,8 +467,8 @@ padding-top: 0.5em;
 
 .carousel2{
   display: flex;
-  overflow-x: auto;
-  overflow-y: auto;
+  width: 100%;
+  overflow: hidden;
   touch-action: pan-y;
 }
 
@@ -466,18 +479,27 @@ padding-top: 0.5em;
 .group2{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1em;
-  animation: spin 22s linear infinite;
+  gap: 1rem;
+  animation: spin 15s linear infinite;
   padding-right: 1em;
+  will-change: transform;
 }
 
 .card2{
-  flex: 0 0 12em;
+  flex: 0 0 14rem;
+  height: 6rem; 
   padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #ffffff;
-  text-align: center;
   align-content: center;
+}
+
+.card2 img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /* FOOTER */
