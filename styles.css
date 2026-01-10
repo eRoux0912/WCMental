@@ -218,70 +218,59 @@ li .nav-link:focus {
 
 /* carousel */
 
-.carousel{
-  display: flex;
-  overflow: hidden;
-  touch-action: pan-y;
+.carousel {
   width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+    scrollbar-width: thin;
+  scrollbar-color: #c5c5c5 transparent;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none;
+  height: 8px;
 }
 
-.group{
+.carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  border-radius: 20px;
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+  background-color: #a8a8a8;
+}
+
+.group {
   display: flex;
-  align-items: center;
   gap: 1rem;
-  animation: spin 25s linear infinite;
-  padding-right: 1em;
-  will-change: transform;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
 }
 
 .card {
-    height:22rem;
-    display: flex;         
-    flex: 0 0 14rem;                         
-    padding: 1em;
-    background: #ffffff;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 20px; 
-    border: 1px solid rgba(0, 0, 0, 0.05); 
+  flex: 0 0 clamp(220px, 70vw, 480px);
+  height: clamp(220px, 40vw, 288px);
+  background: #f0f0f0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card img{
-   max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-@keyframes spin {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
+/* Subtle modern hover effect (desktop only) */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
   }
 }
 
-
-.card h5 {
-    color: #001f40;
-    font-size: 1.05em;
-}
-
-.card p {
-    margin-top: 1em;
-    font-size: 0.95em;
-    color: #001f40;
-}
-
-.card img {
-    height: 100%;
-    width: 100%;
-}
 
 /* guidance section */
 
@@ -316,7 +305,7 @@ li .nav-link:focus {
 }
 
 .negCard, .posCard {
-    background-color: #f4f4f4;         
+    background-color: #f0f0f0;         
     border-radius: 25px;               
     padding: 1.5em 1.2em;              
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -468,38 +457,13 @@ padding-top: 0.5em;
 .carousel2{
   display: flex;
   width: 100%;
-  overflow: hidden;
-  touch-action: pan-y;
-}
-
-.carousel2::-webkit-scrollbar{
-  display: none;
 }
 
 .group2{
   display: flex;
   align-items: center;
   gap: 1rem;
-  animation: spin 15s linear infinite;
   padding-right: 1em;
-  will-change: transform;
-}
-
-.card2{
-  flex: 0 0 14rem;
-  height: 6rem; 
-  padding: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
-  align-content: center;
-}
-
-.card2 img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
 }
 
 /* FOOTER */
