@@ -454,16 +454,8 @@ padding-top: 0.5em;
 
 /* carousel2 */
 
-.carousel2{
-  display: flex;
-  width: 100%;
-}
-
-.group2{
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding-right: 1em;
+.logos{
+  max-width: 12em;
 }
 
 /* FOOTER */
